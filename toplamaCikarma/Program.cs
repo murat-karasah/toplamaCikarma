@@ -4,23 +4,86 @@ namespace toplamaCikarma
 {
     class Program
     {
-        static int a=0,fonksiyon;
+        static int secim,sayiBir,sayiIkı;
         static void Main(string[] args)
 
         {
-            Console.WriteLine("Yapmak istediğiniz fonksiyon kodunu giriniz : \n 1-Toplama \n 2-Çıkartma \n 3-Çarpma \n 4-Bölme");
-           Convert.ToInt32(Console.ReadLine());
-            while (fonksiyon.GetType() != a.GetType())
+            Console.WriteLine("Yapmak istediğiniz fonksiyon kodunu giriniz : \n 1-4 işlem \n 2-Karesini Alma \n 3-Kara Kök");
+           secim =Convert.ToInt32(Console.ReadLine());
+            switch (secim)
             {
-                Console.WriteLine("Yapmak istediğiniz fonksiyon kodunu giriniz : \n 1-Toplama \n 2-Çıkartma \n 3-Çarpma \n 4-Bölme");
-                fonksiyon = Convert.ToInt32(Console.ReadLine());
-                if (fonksiyon==1|| fonksiyon == 2 || fonksiyon == 3 || fonksiyon == 4)
-                {
+                case 1:
+                    Console.WriteLine("Yapmak istediğiniz fonksiyon kodunu giriniz : \n 1-Toplama \n 2-Çıkarma \n 3-Bölme \n 4-Çarpma");
+                    int secimDortIslem = Convert.ToInt32(Console.ReadLine());
+                    switch (secimDortIslem)
+                    {
+                        case 1:
+                            Console.WriteLine("Toplama istediğiniz İlk Sayısı Yazınız");
+                            int sayiBir = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Toplama istediğiniz İkinci Sayısı Yazınız");
+                            int sayiIki = Convert.ToInt32(Console.ReadLine());
+                            if (sayiBir != null && sayiIki != null  )
+                            {
+                                int sonuc = sayiBir + sayiIki;
+                                Console.WriteLine("Sonuç :  "+ sonuc);
+                                
+                            }
+                            break;
+                        case 2:
+                            Console.WriteLine("Çıkarmak istediğiniz İlk Sayısı Yazınız");
+                             sayiBir = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Çıkarmak istediğiniz İkinci Sayısı Yazınız");
+                             sayiIki = Convert.ToInt32(Console.ReadLine());
+                            if (sayiBir != null && sayiIki != null)
+                            {
+                                int sonuc = sayiBir - sayiIki;
+
+                                Console.WriteLine("Sonuç :  " + sonuc);
+
+                            }
+                            break;
+                        case 3:
+                            Console.WriteLine("Bölme istediğiniz İlk Sayısı Yazınız");
+                            sayiBir = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Bölme istediğiniz İkinci Sayısı Yazınız");
+                            sayiIki = Convert.ToInt32(Console.ReadLine());
+                            if (sayiBir != null && sayiIki != null)
+                            {
+                                int sonuc = sayiBir / sayiIki;
+                                Console.WriteLine("Sonuç :  " + sonuc);
+
+                            }
+                            break;
+                        case 4:
+                            Console.WriteLine("Çarpma istediğiniz İlk Sayısı Yazınız");
+                            sayiBir = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Çarpma istediğiniz İkinci Sayısı Yazınız");
+                            sayiIki = Convert.ToInt32(Console.ReadLine());
+                            if (sayiBir != null && sayiIki != null)
+                            {
+                                int sonuc = sayiBir * sayiIki;
+
+                                Console.WriteLine("Sonuç :  " + sonuc);
+
+                            }
+                            break;
+
+                        default:
+                            Console.WriteLine("Lütfen bir fonksiyon seçiniz");
+                            Console.WriteLine("Yapmak istediğiniz fonksiyon kodunu giriniz : \n 1-Toplama \n 2-Çıkarma \n 3-Bölme \n 4-Çarpma");
+                             secimDortIslem = Convert.ToInt32(Console.ReadLine());
+                            break;
+                    }
+
+                    break;
+                case 2:
+                    break;
+                case 3:
                     break;
 
-                }
+                default:
+                    break;
             }
-
         }
     }
 }
