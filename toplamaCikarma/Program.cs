@@ -78,15 +78,23 @@ namespace toplamaCikarma
                     break;
                 case 2:
                     Console.WriteLine("Karesini almak istediğiniz Sayıyı Yazınız");
-                    int karekok = Convert.ToInt32(Console.ReadLine());
-                    if (karekok != null)
+                    int karesi = Convert.ToInt32(Console.ReadLine());
+                    if (karesi != null)
                     {
-                      double  sonuc = Math.Pow(karekok, 2);
+                      double  sonuc = Math.Pow(karesi, 2);
                             Console.WriteLine("Sonuç :  " + sonuc);
 
                     }
                     break;
                 case 3:
+                    Console.WriteLine("karekok almak istediğiniz Sayıyı Yazınız");
+                    int karekok = Convert.ToInt32(Console.ReadLine());
+                    if (karekok != null)
+                    {
+                       double sonuc = Math.Sqrt(karekok);
+                        Console.WriteLine("Sonuç :  " + sonuc);
+
+                    }
                     break;
 
                 default:
