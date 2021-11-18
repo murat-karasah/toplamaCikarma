@@ -77,6 +77,14 @@ namespace toplamaCikarma
 
                     break;
                 case 2:
+                    Console.WriteLine("Karesini almak istediğiniz Sayıyı Yazınız");
+                    int karekok = Convert.ToInt32(Console.ReadLine());
+                    if (karekok != null)
+                    {
+                      double  sonuc = Math.Pow(karekok, 2);
+                            Console.WriteLine("Sonuç :  " + sonuc);
+
+                    }
                     break;
                 case 3:
                     break;
